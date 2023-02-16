@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "eolnuha",
+    title: "Portfolio | Eol Nuha",
     htmlAttrs: {
       lang: "en",
     },
@@ -10,6 +10,43 @@ export default {
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { hid: "description", name: "description", content: "" },
       { name: "format-detection", content: "telephone=no" },
+      {
+        name: "description",
+        content:
+          "Eol Nuha is a highly skilled Frontend Developer at GjirafaTech. He has a strong background in various programming languages, including Python, JavaScript, HTML, CSS, Vue.js, Nuxt.js, React.js, Django, Flask, and he is well-equipped to tackle any challenge that arises.",
+      },
+      {
+        name: "keywords",
+        content: "eol nuha, eol, nuha, eol nuha portfolio",
+      },
+      {
+        property: "og:title",
+        content: "Portfolio | Eol Nuha",
+      },
+      {
+        property: "og:image",
+        content:
+          "https://raw.githubusercontent.com/EolNuha/eolnuha.com/master/website/static/portfolio/images/preview.png",
+      },
+      {
+        property: "og:description",
+        content:
+          "Eol Nuha is a highly skilled Frontend Developer at GjirafaTech. He has a strong background in various programming languages, including Python, JavaScript, HTML, CSS, Vue.js, Nuxt.js, React.js, Django, Flask, and he is well-equipped to tackle any challenge that arises.",
+      },
+      {
+        name: "twitter:title",
+        content: "Portfolio | Eol Nuha",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://raw.githubusercontent.com/EolNuha/eolnuha.com/master/website/static/portfolio/images/preview.png",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Eol Nuha is a highly skilled Frontend Developer at GjirafaTech. He has a strong background in various programming languages, including Python, JavaScript, HTML, CSS, Vue.js, Nuxt.js, React.js, Django, Flask, and he is well-equipped to tackle any challenge that arises.",
+      },
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },

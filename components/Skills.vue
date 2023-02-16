@@ -43,7 +43,7 @@
               v-else
               class="bar"
               v-for="skill in skills.slice(0, skills.length / 2)"
-              :key="`skill${skill}`"
+              :key="`skill${skill.language}`"
             >
               <div class="info">
                 <span class="text-uppercase">{{ skill.language }}</span>
@@ -71,7 +71,7 @@
               v-else
               class="bar"
               v-for="skill in skills.slice(skills.length / 2, skills.length)"
-              :key="skill"
+              :key="skill.language"
             >
               <div class="info">
                 <span class="text-uppercase">{{ skill.language }}</span>

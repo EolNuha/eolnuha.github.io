@@ -9,9 +9,15 @@
         <div>
           <h1>Find me on other social media</h1>
           <div class="flex justify-center gap-[10px]">
-            <span class="icon icon-linkedin"></span>
-            <span class="icon icon-github"></span>
-            <span class="icon icon-stackoverflow"></span>
+            <a href="https://www.linkedin.com/in/eolnuha/"
+              ><span class="icon icon-linkedin"></span
+            ></a>
+            <a href="https://github.com/eolnuha"
+              ><span class="icon icon-github"></span
+            ></a>
+            <a href="https://stackoverflow.com/users/14683130/eol-nuha"
+              ><span class="icon icon-stackoverflow"></span
+            ></a>
           </div>
         </div>
       </div>
