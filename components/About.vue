@@ -25,12 +25,14 @@
       </div>
       <div class="flex justify-center relative">
         <div class="absolute top-[50%]" style="transform: translateY(-50%)">
-          <button
-            class="bg-transparent border border-gray-200 py-3 px-6 rounded text-white"
-            style="backdrop-filter: blur(40px)"
-          >
-            Download Resume
-          </button>
+          <a href="/cv.pdf" download="resume">
+            <button
+              class="bg-transparent border border-gray-200 py-3 px-6 rounded text-white"
+              style="backdrop-filter: blur(40px)"
+            >
+              Download Resume
+            </button>
+          </a>
         </div>
         <svg
           id="sw-js-blob-svg"
