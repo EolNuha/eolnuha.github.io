@@ -56,12 +56,10 @@ export default {};
 
 <style scoped lang="scss">
 h1 {
-  font-family: "Lato", sans-serif;
   font-weight: 300;
   letter-spacing: 2px;
 }
 p {
-  font-family: "Lato", sans-serif;
   letter-spacing: 1px;
   color: #333333;
 }

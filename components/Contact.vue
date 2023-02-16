@@ -34,7 +34,7 @@
         placeholder="Your message"
         class="w-full rounded border p-3 mt-[20px]"
       ></textarea>
-      <button class="rounded p-3 w-full submit-btn">Send email</button>
+      <button class="rounded p-3 w-full submit-btn">Submit</button>
     </div>
   </div>
 </template>
