@@ -3,10 +3,7 @@
     <Header />
     <div class="container">
       <About />
-      <div class="section-title mt-10">
-        <h1>Experiences</h1>
-        <p>Below are my job experiences as a software developer.</p>
-      </div>
+      <Experiences />
       <Skills />
       <Projects />
       <Contact />
