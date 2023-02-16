@@ -20,14 +20,6 @@ export default {};
 </script>
 
 <style lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap");
-
-body {
-  margin: 0;
-  font-family: "Manrope", "Inter";
-  font-size: 16px;
-}
-
 .section-title {
   background: #f7f8fc;
   padding: 25px;
