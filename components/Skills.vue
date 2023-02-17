@@ -4,7 +4,9 @@
       <h1>Skills</h1>
       <p>These are my main skills as a full-stack software developer.</p>
     </div>
-    <div class="text-center skill-categories">
+    <div
+      class="flex items-center flex-wrap justify-center gap-[10px] skill-categories"
+    >
       <span
         class="border-bottom text-3xl px-2 cursor-pointer border-b-2"
         :class="{

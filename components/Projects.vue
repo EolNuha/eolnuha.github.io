@@ -6,7 +6,7 @@
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-[30px]">
       <div>
-        <a href="projects/sorting-visualizer">
+        <nuxt-link to="projects/sorting-visualizer">
           <div class="box-image">
             <img
               src="../assets/images/sorting-visualizer1.webp"
@@ -18,10 +18,10 @@
               <p>Sorting Visualizer</p>
             </div>
           </div>
-        </a>
+        </nuxt-link>
       </div>
       <div>
-        <a href="projects/movie-freaks">
+        <nuxt-link to="projects/movie-freaks">
           <div class="box-image">
             <img
               src="../assets/images/movie-freaks.webp"
@@ -33,10 +33,10 @@
               <p>Movie Freaks</p>
             </div>
           </div>
-        </a>
+        </nuxt-link>
       </div>
       <div>
-        <a href="projects/cyber-city">
+        <nuxt-link to="projects/cyber-city">
           <div class="box-image">
             <img
               src="../assets/images/cyber-city.webp"
@@ -48,10 +48,10 @@
               <p>Cyber City</p>
             </div>
           </div>
-        </a>
+        </nuxt-link>
       </div>
       <div>
-        <a href="projects/tower-war">
+        <nuxt-link to="projects/tower-war">
           <div class="box-image">
             <img
               src="../assets/images/tower-war-game.webp"
@@ -63,10 +63,10 @@
               <p>Tower War Game</p>
             </div>
           </div>
-        </a>
+        </nuxt-link>
       </div>
       <div>
-        <a href="projects/dino-game">
+        <nuxt-link to="projects/dino-game">
           <div class="box-image">
             <img
               src="../assets/images/dino-game.webp"
@@ -78,10 +78,10 @@
               <p>Dinosaur Game</p>
             </div>
           </div>
-        </a>
+        </nuxt-link>
       </div>
       <div>
-        <a href="projects/e-commerce">
+        <nuxt-link to="projects/e-commerce">
           <div class="box-image">
             <img
               src="../assets/images/e-commerce.webp"
@@ -93,7 +93,7 @@
               <p>E-commerce Website</p>
             </div>
           </div>
-        </a>
+        </nuxt-link>
       </div>
     </div>
   </div>
