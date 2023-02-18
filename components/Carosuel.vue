@@ -3,17 +3,7 @@
     <VueSlickCarousel v-bind="settings">
       <template v-for="(img, index) in imgs">
         <div class="!flex justify-center" :key="index">
-          <img
-            :src="img.src"
-            :alt="img.alt"
-            style="max-width: 500px; width: 100%"
-          />
-        </div>
-      </template>
-      <template #prevArrow="arrowOption">
-        <div class="custom-arrow">
-          {{ arrowOption.currentSlide }}/{{ arrowOption.slideCount }}
-          eol
+          <img :src="img.src" :alt="img.alt" class="rounded max-h-[500px]" />
         </div>
       </template>
     </VueSlickCarousel>
@@ -23,12 +13,11 @@
 <script>
 import VueSlickCarousel from "vue-slick-carousel";
 import "vue-slick-carousel/dist/vue-slick-carousel.css";
-// optional style for arrows & dots
 import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
 export default {
   props: {
     imgs: {
-      type: Object,
+      type: Array,
       required: true,
     },
   },

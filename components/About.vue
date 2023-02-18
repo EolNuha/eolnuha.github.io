@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="about">
     <div class="section-title">
       <h1>About Me</h1>
       <p>I am Eol Nuha, and I am a full-stack software developer.</p>

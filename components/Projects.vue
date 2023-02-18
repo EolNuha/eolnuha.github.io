@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="projects">
     <div class="section-title mt-10">
       <h1>Projects</h1>
       <p>These are some of the best projects that I've done recently.</p>

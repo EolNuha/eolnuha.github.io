@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="skills">
     <div class="section-title mt-10">
       <h1>Skills</h1>
       <p>These are my main skills as a full-stack software developer.</p>

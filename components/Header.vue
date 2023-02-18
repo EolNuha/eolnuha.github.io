@@ -1,11 +1,23 @@
 <template>
   <div class="header mb-5">
     <div
-      class="inner-header flex flex-col items-center justify-center gap-[5px]"
+      class="inner-header flex flex-col items-center justify-center gap-[5px] relative"
     >
-      <p class="text-2xl">Hi, I am</p>
+      <div
+        class="absolute top-[10px] flex gap-[20px] justify-center items-center"
+        v-show="$nuxt.$route.path !== '/'"
+      >
+        <nuxt-link class="border-b-2 px-2" to="/">Home</nuxt-link>
+        <nuxt-link class="border-b-2 px-2" to="/#about">About</nuxt-link>
+        <nuxt-link class="border-b-2 px-2" to="/#experiences"
+          >Experiences</nuxt-link
+        >
+        <nuxt-link class="border-b-2 px-2" to="/#projects">Projects</nuxt-link>
+        <nuxt-link class="border-b-2 px-2" to="/#contact">Contact</nuxt-link>
+      </div>
+      <p class="text-2xl">{{ smallText }}</p>
       <hr class="devider header-devider max-w-[130px] md:max-w-[180px]" />
-      <h1 class="text-5xl md:text-7xl">Eol Nuha</h1>
+      <h1 class="text-5xl md:text-7xl">{{ largeText }}</h1>
     </div>
 
     <div>
@@ -51,7 +63,18 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    smallText: {
+      type: String,
+      required: true,
+    },
+    largeText: {
+      type: String,
+      required: true,
+    },
+  },
+};
 </script>
 
 <style scoped lang="scss">

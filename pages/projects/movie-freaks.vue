@@ -1,33 +1,28 @@
 <template>
-  <div class="container">
-    <Carosuel
-      :imgs="[
-        {
-          src: 'https://eolnuha.github.io/_nuxt/img/movie-freaks.0414d03.webp',
-          alt: 'Movie freaks project',
-        },
-        {
-          src: 'https://eolnuha.github.io/_nuxt/img/movie-freaks.0414d03.webp',
-          alt: 'Movie freaks project',
-        },
-        {
-          src: 'https://eolnuha.github.io/_nuxt/img/movie-freaks.0414d03.webp',
-          alt: 'Movie freaks project',
-        },
-        {
-          src: 'https://eolnuha.github.io/_nuxt/img/movie-freaks.0414d03.webp',
-          alt: 'Movie freaks project',
-        },
-        {
-          src: 'https://eolnuha.github.io/_nuxt/img/movie-freaks.0414d03.webp',
-          alt: 'Movie freaks project',
-        },
-        {
-          src: 'https://eolnuha.github.io/_nuxt/img/movie-freaks.0414d03.webp',
-          alt: 'Movie freaks project',
-        },
-      ]"
-    />
+  <div>
+    <Header smallText="Eol Nuha" largeText="Movie Freaks" />
+    <div class="container">
+      <Carosuel
+        :imgs="[
+          {
+            src: require('~/assets/images/projects/movie-loader.png'),
+            alt: 'Movie freaks project',
+          },
+          {
+            src: require('~/assets/images/projects/movie-home.png'),
+            alt: 'Movie freaks project',
+          },
+          {
+            src: require('~/assets/images/projects/movie-ipad.png'),
+            alt: 'Movie freaks project',
+          },
+          {
+            src: require('~/assets/images/projects/movie-phone.png'),
+            alt: 'Movie freaks project',
+          },
+        ]"
+      />
+    </div>
   </div>
 </template>
 

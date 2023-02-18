@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header />
+    <Header smallText="Hi, I am" largeText="Eol Nuha" />
     <div class="container">
       <About />
       <Experiences />
