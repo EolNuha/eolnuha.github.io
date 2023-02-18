@@ -78,6 +78,10 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ["@nuxtjs/sitemap"],
 
+  sitemap: {
+    hostname: "https://eolnuha.github.io",
+  },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     postcss: {
