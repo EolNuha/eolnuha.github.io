@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
+    "@nuxtjs/sitemap": "^2.4.0",
     "core-js": "^3.25.3",
     "flowbite": "^1.6.3",
     "nuxt": "^2.15.8",
