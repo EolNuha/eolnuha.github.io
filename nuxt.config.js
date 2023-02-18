@@ -46,6 +46,10 @@ export default {
         content:
           "Eol Nuha is a highly skilled Frontend Developer at GjirafaTech. He has a strong background in various programming languages, including Python, JavaScript, HTML, CSS, Vue.js, Nuxt.js, React.js, Django, Flask, and he is well-equipped to tackle any challenge that arises.",
       },
+      {
+        name: "google-site-verification",
+        content: "frJ1iTP8J6nnDrllgLvnmDvupEWQRDwI4sC5nfTHemE",
+      },
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
