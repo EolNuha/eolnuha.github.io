@@ -3,18 +3,69 @@
     <div
       class="inner-header flex flex-col items-center justify-center gap-[5px] relative"
     >
-      <div
-        class="absolute top-[10px] flex gap-[20px] justify-center items-center"
+      <nav
+        class="absolute top-[10px] bg-transparent border-gray-200 px-2 sm:px-4 py-2.5 rounded w-full"
         v-show="$nuxt.$route.path !== '/'"
       >
-        <nuxt-link class="border-b-2 px-2" to="/">Home</nuxt-link>
-        <nuxt-link class="border-b-2 px-2" to="/#about">About</nuxt-link>
-        <nuxt-link class="border-b-2 px-2" to="/#experiences"
-          >Experiences</nuxt-link
+        <div
+          class="container flex flex-wrap items-center justify-between mx-auto"
         >
-        <nuxt-link class="border-b-2 px-2" to="/#projects">Projects</nuxt-link>
-        <nuxt-link class="border-b-2 px-2" to="/#contact">Contact</nuxt-link>
-      </div>
+          <nuxt-link class="border-b-2 px-2" to="/">Home</nuxt-link>
+          <button
+            type="button"
+            class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-neutral-700 focus:outline-none focus:ring-2 focus:ring-neutral-500"
+            aria-expanded="false"
+            id="navbarBtn"
+            @click="() => (navbar = !navbar)"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-6 h-6"
+              aria-hidden="true"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+          <div
+            class="w-full md:block md:w-auto"
+            :class="navbar ? '' : 'hidden'"
+            id="navbar"
+          >
+            <ul
+              class="bg-transparent flex flex-col p-4 mt-4 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium"
+            >
+              <li>
+                <nuxt-link class="border-b-2 px-2" to="/#about"
+                  >About</nuxt-link
+                >
+              </li>
+              <li>
+                <nuxt-link class="border-b-2 px-2" to="/#experiences"
+                  >Experiences</nuxt-link
+                >
+              </li>
+              <li>
+                <nuxt-link class="border-b-2 px-2" to="/#projects"
+                  >Projects</nuxt-link
+                >
+              </li>
+              <li>
+                <nuxt-link class="border-b-2 px-2" to="/#contact"
+                  >Contact</nuxt-link
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
       <p class="text-2xl">{{ smallText }}</p>
       <hr class="devider header-devider max-w-[130px] md:max-w-[180px]" />
       <h1 class="text-5xl md:text-7xl">{{ largeText }}</h1>
@@ -58,7 +109,6 @@
         </g>
       </svg>
     </div>
-    <!--Waves end-->
   </div>
 </template>
 
@@ -73,6 +123,11 @@ export default {
       type: String,
       required: true,
     },
+  },
+  data() {
+    return {
+      navbar: false,
+    };
   },
 };
 </script>
