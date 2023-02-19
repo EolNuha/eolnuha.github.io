@@ -6,7 +6,7 @@
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 justify-center items-center">
       <div class="flex flex-col items-center gap-[12px]">
-        <h1 class="text-5xl text-center">A Software Developer</h1>
+        <h1 class="text-3xl md:text-5xl text-center">A Software Developer</h1>
         <p class="mb-0">
           As a highly skilled Frontend Developer at Gjirafa, I specialize in
           utilizing my problem-solving abilities and technical expertise to

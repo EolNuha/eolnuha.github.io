@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div class="container">
-      <div class="grid grid-cols-1 md:grid-cols-2 py-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 py-10 gap-[30px] md:gap-0">
         <div>
           <h1 class="text-xl md:text-3xl">This is my portfolio</h1>
           <p>eolnuha.com © copyright {{ new Date().getFullYear() }}</p>

@@ -38,6 +38,33 @@
     </div>
     <div class="flex items-center flex-wrap gap-[20px]">
       <div class="relative flex-[100%] md:flex-[25%] flex justify-center">
+        <img
+          src="../assets/images/weborigo.svg"
+          class="w-[80%]"
+          alt="Weborigo"
+        />
+      </div>
+      <div class="flex-[100%] md:flex-[70%]">
+        <h2 class="text-2xl font-bold">Frontend Developer</h2>
+        <h3 class="italic">WebOrigo (April 2022 - July 2022)</h3>
+        <ul class="list-disc list-inside">
+          <li>
+            Implemented the design of countless web pages and developed modern
+            mobile-first websites.
+          </li>
+          <li>
+            Communicated closely with clients to collect requirements and
+            deliver quality projects.
+          </li>
+          <li>
+            Improved legacy code and maintain the overall quality of the
+            codebase.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="flex items-center flex-wrap gap-[20px]">
+      <div class="relative flex-[100%] md:flex-[25%] flex justify-center">
         <img src="../assets/images/pythys.svg" class="w-[80%]" alt="Pythys" />
       </div>
       <div class="flex-[100%] md:flex-[70%]">
