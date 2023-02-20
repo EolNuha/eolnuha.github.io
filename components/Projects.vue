@@ -6,6 +6,21 @@
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-[30px]">
       <div>
+        <nuxt-link to="/projects/pos-desktop-app">
+          <div class="box-image">
+            <img
+              src="../assets/images/pos.webp"
+              width="100%"
+              loading="lazy"
+              alt="Point of sale Image"
+            />
+            <div class="box-name">
+              <p>Point of Sale Desktop App</p>
+            </div>
+          </div>
+        </nuxt-link>
+      </div>
+      <div>
         <nuxt-link to="projects/sorting-visualizer">
           <div class="box-image">
             <img
@@ -80,7 +95,7 @@
           </div>
         </nuxt-link>
       </div>
-      <div>
+      <!-- <div>
         <nuxt-link to="projects/e-commerce">
           <div class="box-image">
             <img
@@ -94,7 +109,7 @@
             </div>
           </div>
         </nuxt-link>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>

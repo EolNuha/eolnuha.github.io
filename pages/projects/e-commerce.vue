@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header smallText="Eol Nuha" largeText="E-Commerce Website" />
+    <Header smallText="Project" largeText="E-Commerce Website" />
     <div class="container">
       <Carosuel
         :imgs="[

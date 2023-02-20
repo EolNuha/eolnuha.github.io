@@ -28,6 +28,17 @@ html {
   padding: 0 20px;
 }
 
+.pillar {
+  border-radius: 40px;
+  background: linear-gradient(
+    60deg,
+    rgba(32, 33, 36, 1) 0%,
+    rgb(79, 79, 79) 100%
+  );
+  color: white;
+  padding: 0.5rem 0.75rem;
+}
+
 .icon {
   display: inline-block;
   width: 24px;

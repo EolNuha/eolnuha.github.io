@@ -68,7 +68,7 @@
 
       <p class="text-2xl">{{ smallText }}</p>
       <hr class="devider header-devider max-w-[130px] md:max-w-[180px]" />
-      <h1 class="text-5xl md:text-7xl">{{ largeText }}</h1>
+      <h1 class="text-5xl md:text-7xl text-wrap">{{ largeText }}</h1>
     </div>
 
     <div>

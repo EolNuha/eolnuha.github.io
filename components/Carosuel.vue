@@ -3,7 +3,12 @@
     <VueSlickCarousel v-bind="settings">
       <template v-for="(img, index) in imgs">
         <div class="!flex justify-center" :key="index">
-          <img :src="img.src" :alt="img.alt" class="rounded max-h-[500px]" />
+          <img
+            :src="img.src"
+            :alt="img.alt"
+            class="rounded max-h-[500px]"
+            :class="border ? 'border' : ''"
+          />
         </div>
       </template>
     </VueSlickCarousel>
@@ -19,6 +24,11 @@ export default {
     imgs: {
       type: Array,
       required: true,
+    },
+    border: {
+      type: Boolean,
+      required: false,
+      default: false,
     },
   },
   data() {
