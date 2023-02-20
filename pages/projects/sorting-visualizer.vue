@@ -176,6 +176,29 @@
 </template>
 <script>
 export default {
+  head() {
+    return {
+      title: "Portfolio | Sorting Visualizer",
+      meta: [
+        {
+          name: "keywords",
+          hid: "keywords",
+          content:
+            "eol nuha, eol, nuha, eol nuha portfolio, eol nuha projects, Sorting Visualizer, eol nuha Sorting Visualizer",
+        },
+        {
+          property: "og:title",
+          hid: "og-title",
+          content: "Portfolio | Sorting Visualizer",
+        },
+        {
+          name: "twitter:title",
+          hid: "twitter-title",
+          content: "Portfolio | Sorting Visualizer",
+        },
+      ],
+    };
+  },
   data() {
     return {
       array: [],

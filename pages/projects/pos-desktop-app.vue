@@ -89,5 +89,29 @@
 </template>
 
 <script>
-export default {};
+export default {
+  head() {
+    return {
+      title: "Portfolio | Point of Sale Desktop App",
+      meta: [
+        {
+          name: "keywords",
+          hid: "keywords",
+          content:
+            "eol nuha, eol, nuha, eol nuha portfolio, eol nuha projects, point of sale desktop app, pos",
+        },
+        {
+          property: "og:title",
+          hid: "og-title",
+          content: "Portfolio | Point of Sale Desktop App",
+        },
+        {
+          name: "twitter:title",
+          hid: "twitter-title",
+          content: "Portfolio | Point of Sale Desktop App",
+        },
+      ],
+    };
+  },
+};
 </script>

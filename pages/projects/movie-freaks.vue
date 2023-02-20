@@ -76,5 +76,29 @@
 </template>
 
 <script>
-export default {};
+export default {
+  head() {
+    return {
+      title: "Portfolio | Movie Freaks",
+      meta: [
+        {
+          name: "keywords",
+          hid: "keywords",
+          content:
+            "eol nuha, eol, nuha, eol nuha portfolio, eol nuha projects, Movie Freaks, eol nuha movie freaks",
+        },
+        {
+          property: "og:title",
+          hid: "og-title",
+          content: "Portfolio | Movie Freaks",
+        },
+        {
+          name: "twitter:title",
+          hid: "twitter-title",
+          content: "Portfolio | Movie Freaks",
+        },
+      ],
+    };
+  },
+};
 </script>

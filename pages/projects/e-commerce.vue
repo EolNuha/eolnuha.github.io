@@ -27,5 +27,29 @@
 </template>
 
 <script>
-export default {};
+export default {
+  head() {
+    return {
+      title: "Portfolio | E-Commerce Website",
+      meta: [
+        {
+          name: "keywords",
+          hid: "keywords",
+          content:
+            "eol nuha, eol, nuha, eol nuha portfolio, eol nuha projects, E-Commerce Website, eol nuha E-Commerce Website",
+        },
+        {
+          property: "og:title",
+          hid: "og-title",
+          content: "Portfolio | E-Commerce Website",
+        },
+        {
+          name: "twitter:title",
+          hid: "twitter-title",
+          content: "Portfolio | E-Commerce Website",
+        },
+      ],
+    };
+  },
+};
 </script>

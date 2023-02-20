@@ -75,5 +75,29 @@
 </template>
 
 <script>
-export default {};
+export default {
+  head() {
+    return {
+      title: "Portfolio | Tower War Game",
+      meta: [
+        {
+          name: "keywords",
+          hid: "keywords",
+          content:
+            "eol nuha, eol, nuha, eol nuha portfolio, eol nuha projects, Tower War Game, eol nuha Tower War Game",
+        },
+        {
+          property: "og:title",
+          hid: "og-title",
+          content: "Portfolio | Tower War Game",
+        },
+        {
+          name: "twitter:title",
+          hid: "twitter-title",
+          content: "Portfolio | Tower War Game",
+        },
+      ],
+    };
+  },
+};
 </script>

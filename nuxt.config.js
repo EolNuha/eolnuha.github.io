@@ -1,5 +1,6 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
+  layout: "default",
   head: {
     title: "Portfolio | Eol Nuha",
     htmlAttrs: {
@@ -16,10 +17,12 @@ export default {
       },
       {
         name: "keywords",
+        hid: "keywords",
         content: "eol nuha, eol, nuha, eol nuha portfolio",
       },
       {
         property: "og:title",
+        hid: "og-title",
         content: "Portfolio | Eol Nuha",
       },
       {
@@ -34,6 +37,7 @@ export default {
       },
       {
         name: "twitter:title",
+        hid: "twitter-title",
         content: "Portfolio | Eol Nuha",
       },
       {

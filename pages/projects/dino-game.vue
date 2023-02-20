@@ -66,5 +66,29 @@
 </template>
 
 <script>
-export default {};
+export default {
+  head() {
+    return {
+      title: "Portfolio | Dino Game",
+      meta: [
+        {
+          name: "keywords",
+          hid: "keywords",
+          content:
+            "eol nuha, eol, nuha, eol nuha portfolio, eol nuha projects, Dino Game, eol nuha Dino Game",
+        },
+        {
+          property: "og:title",
+          hid: "og-title",
+          content: "Portfolio | Dino Game",
+        },
+        {
+          name: "twitter:title",
+          hid: "twitter-title",
+          content: "Portfolio | Dino Game",
+        },
+      ],
+    };
+  },
+};
 </script>

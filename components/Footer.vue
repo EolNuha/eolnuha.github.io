@@ -4,7 +4,9 @@
       <div class="grid grid-cols-1 md:grid-cols-2 py-10 gap-[30px] md:gap-0">
         <div>
           <h1 class="text-xl md:text-3xl">This is my portfolio</h1>
-          <p>eolnuha.com © copyright {{ new Date().getFullYear() }}</p>
+          <p class="opacity-[0.7]">
+            eolnuha.com © copyright {{ new Date().getFullYear() }}
+          </p>
         </div>
         <div>
           <h1 class="text-xl md:text-3xl">Find me on other social media</h1>
@@ -32,7 +34,7 @@ export default {};
 <style lang="scss" scoped>
 footer {
   background: #1a1a1a;
-  margin-top: 150px;
+  margin-top: 100px;
   h1 {
     color: white;
     text-align: center;
@@ -40,6 +42,12 @@ footer {
   p {
     @apply text-gray-200;
     text-align: center;
+  }
+  .icon {
+    opacity: 0.7;
+    &:hover {
+      opacity: 1;
+    }
   }
 }
 </style>
