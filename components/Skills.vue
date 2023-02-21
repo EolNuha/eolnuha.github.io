@@ -5,12 +5,13 @@
       <p>These are my main skills as a full-stack software developer.</p>
     </div>
     <div
-      class="flex items-center flex-wrap justify-center gap-[10px] skill-categories"
+      class="flex items-center flex-wrap justify-center gap-[10px] skill-categories text-neutral-500"
     >
       <span
         class="border-bottom text-3xl px-2 cursor-pointer border-b-2"
         :class="{
-          'border-blue-500 text-blue-500 border-b-4': category === 'frontend',
+          'border-neutral-700 text-neutral-700 border-b-4':
+            category === 'frontend',
         }"
         @click="changeCategory('frontend')"
         >Front-end</span
@@ -18,7 +19,8 @@
       <span
         class="border-bottom text-3xl px-2 cursor-pointer border-b-2"
         :class="{
-          'border-blue-500 text-blue-500 border-b-4': category === 'backend',
+          'border-neutral-700 text-neutral-700 border-b-4':
+            category === 'backend',
         }"
         @click="changeCategory('backend')"
         >Back-end</span
@@ -26,7 +28,8 @@
       <span
         class="border-bottom text-3xl px-2 cursor-pointer border-b-2"
         :class="{
-          'border-blue-500 text-blue-500 border-b-4': category === 'other',
+          'border-neutral-700 text-neutral-700 border-b-4':
+            category === 'other',
         }"
         @click="changeCategory('other')"
         >Other</span
@@ -180,7 +183,7 @@ export default {
 
 .my-skills-bar .bar .info {
   margin-bottom: 8px;
-  color: #07374a;
+  color: rgba(32, 33, 36, 1);
 }
 
 .my-skills-bar .bar .progress-line {
@@ -196,7 +199,11 @@ export default {
 
 .bar .progress-line span {
   position: absolute;
-  background: #09f;
+  background: linear-gradient(
+    to right,
+    rgba(32, 33, 36, 1) 0%,
+    rgb(99, 99, 99) 100%
+  );
   height: 100%;
   border-radius: 10px;
   transform: scaleX(0);
@@ -225,7 +232,7 @@ export default {
   border-bottom-width: 0px;
   border-right-width: 0px;
   border-top-style: #f0f0f0;
-  border-top-color: #07374a;
+  border-top-color: rgba(32, 33, 36, 1);
 }
 
 .bar .progress-line span::after {
@@ -235,7 +242,7 @@ export default {
   color: #f0f0f0;
   font-size: 12px;
   font-weight: 700;
-  background: #07374a;
+  background: rgba(32, 33, 36, 1);
   padding: 1px 8px;
   border-radius: 3px;
 }
@@ -263,13 +270,13 @@ export default {
 .big-circle {
   width: 8rem;
   height: 8rem;
-  border: 5px solid #09f;
+  border: 5px solid rgb(43, 43, 44);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  border-color: #09f transparent #09f #09f;
+  border-color: rgb(43, 43, 44) transparent rgb(43, 43, 44) rgb(43, 43, 44);
   animation: bigcircle 1.2s linear infinite;
 }
 
@@ -277,9 +284,9 @@ export default {
   position: relative;
   width: 5rem;
   height: 5rem;
-  border: 5px solid #09f;
+  border: 5px solid rgb(43, 43, 44);
   border-radius: 50%;
-  border-color: #09f #09f transparent #09f;
+  border-color: rgb(43, 43, 44) rgb(43, 43, 44) transparent rgb(43, 43, 44);
 }
 
 @keyframes bigcircle {

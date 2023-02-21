@@ -1,5 +1,9 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
+  transition: {
+    name: "bounce",
+    mode: "out-in",
+  },
   layout: "default",
   head: {
     title: "Portfolio | Eol Nuha",
