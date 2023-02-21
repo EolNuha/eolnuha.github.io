@@ -3,8 +3,8 @@
     <Header smallText="Project" largeText="Sorting Visualizer" />
     <div class="container">
       <div class="sorting-box-shadow my-5 relative rounded">
-        <div class="sidebar rounded" :style="'display: ' + sidebar">
-          <div class="p-2 m-0 cursor-pointer" @click="sidebar = 'none'">
+        <div class="sidebar rounded" v-show="sidebar">
+          <div class="p-2 m-0 cursor-pointer" @click="sidebar = false">
             <svg
               fill="none"
               stroke="currentColor"
@@ -59,7 +59,7 @@
           </div>
         </div>
         <div class="flex justify-between items-center p-3">
-          <div class="bars-icon m-0 p-2" @click="sidebar = 'block'">
+          <div class="bars-icon m-0 p-2" @click="sidebar = true">
             <svg
               fill="none"
               stroke="currentColor"
@@ -93,35 +93,19 @@
           </button>
           <button
             class="border-2 border-gray-300 text-white p-2 rounded"
-            @click="mergeSort()"
-            v-if="selectedSort === sorts[0]"
-            :disabled="loading"
-          >
-            {{ selectedSort.name }}
-          </button>
-          <button
-            class="border-2 border-gray-300 text-white p-2 rounded"
-            @click="quickSort"
-            v-if="selectedSort === sorts[1]"
-            :disabled="loading"
-          >
-            {{ selectedSort.name }}
-          </button>
-          <button
-            class="border-2 border-gray-300 text-white p-2 rounded"
-            @click="bubbleSort"
-            v-if="selectedSort === sorts[2]"
-            :disabled="loading"
-          >
-            {{ selectedSort.name }}
-          </button>
-          <button
-            class="border-2 border-gray-300 text-white p-2 rounded"
             v-if="!selectedSort"
-            @click="sidebar = 'block'"
+            @click="sidebar = true"
             :disabled="loading"
           >
             Select Sorting Algorithm
+          </button>
+          <button
+            class="border-2 border-gray-300 text-white p-2 rounded"
+            v-else
+            @click="sort(selectedSort.id)"
+            :disabled="loading"
+          >
+            {{ selectedSort.name }}
           </button>
         </div>
         <div class="array-container text-center p-3">
@@ -175,6 +159,27 @@
   </div>
 </template>
 <script>
+const PRIMARY_COLOR = "rgba(32, 33, 36, 0.5)"; // Unsorted array bar color
+const SECONDARY_COLOR = "yellow"; // Comparing array bar color
+const FINISH_COLOR = "rgba(32, 33, 36, 0.7)"; // Sorted array bar color
+const MERGESORT = 0;
+const QUICKSORT = 1;
+const BUBBLESORT = 2;
+const HEAPSORT = 3;
+const SELECTIONSORT = 4;
+const SHELLSORT = 5;
+
+const PRIMARY_COLOR_EVENT = 1;
+const SECONDARY_COLOR_EVENT = 0;
+const SWAP_EVENT = 3;
+
+import bubbleSortAnimations from "~/plugins/bubble.js";
+import mergeSortAnimations from "~/plugins/merge.js";
+import quickSortAnimations from "~/plugins/quick.js";
+import heapSortAnimations from "~/plugins/heap.js";
+import selectionSortAnimations from "~/plugins/selection.js";
+import shellSortAnimations from "~/plugins/shell.js";
+
 export default {
   head() {
     return {
@@ -205,11 +210,14 @@ export default {
       datasetSize: 50,
       sortingSpeed: 50,
       lowestSortSpeed: 60,
-      sidebar: "none",
+      sidebar: false,
       sorts: [
-        { name: "Merge Sort", space: "O(n)", time: "O(n log n)" },
-        { name: "Quick Sort", space: "O(log n)", time: "O(n log n)*" },
-        { name: "Bubble Sort", space: "O(1)", time: "O(n^2)" },
+        { id: 0, name: "Merge Sort", space: "O(n)", time: "O(n log n)" },
+        { id: 1, name: "Quick Sort", space: "O(log n)", time: "O(n log n)" },
+        { id: 2, name: "Bubble Sort", space: "O(1)", time: "O(n^2)" },
+        { id: 3, name: "Heap Sort", space: "O(1)", time: "O(n log n)" },
+        { id: 4, name: "Selection Sort", space: "O(1)", time: "O(n^2)" },
+        { id: 5, name: "Shell Sort", space: "O(1)", time: "O(n log n)" },
       ],
       selectedSort: "",
       loading: false,
@@ -235,40 +243,57 @@ export default {
         this.array.push(this.randomInt(10, 500));
       }
     },
-    mergeSort() {
-      const animations = this.$getMergeSortAnimations(
-        JSON.parse(JSON.stringify(this.array))
-      );
+    sort(algo) {
       this.loading = true;
+      const animations = this.getAnimations(algo);
+      const arrayBars = document.getElementsByClassName("array-bar");
+      // Go through each animation "frame"
       for (let i = 0; i < animations.length; i++) {
-        const arrayBars = document.getElementsByClassName("array-bar");
-        const isColorChange = i % 3 !== 2;
-        if (isColorChange) {
-          const [barOneId, barTwoId] = animations[i];
-          const barOneStyle = arrayBars[barOneId].style;
-          const barTwoStyle = arrayBars[barTwoId].style;
-          const color = i % 3 === 0 ? "yellow" : "rgba(32, 33, 36, 0.7)";
+        const [event, valA, valB] = animations[i];
+        if (event !== SWAP_EVENT) {
+          let color =
+            event === SECONDARY_COLOR_EVENT
+              ? SECONDARY_COLOR
+              : event === PRIMARY_COLOR_EVENT
+              ? PRIMARY_COLOR
+              : FINISH_COLOR;
+          const aStyle = arrayBars[valA].style;
+          const bStyle = arrayBars[valB].style;
           setTimeout(() => {
-            barOneStyle.backgroundColor = color;
-            barTwoStyle.backgroundColor = color;
+            aStyle.backgroundColor = color;
+            bStyle.backgroundColor = color;
           }, i * (this.lowestSortSpeed - this.sortingSpeed));
         } else {
+          const style = arrayBars[valA].style;
           setTimeout(() => {
-            const [barOneId, newHeight] = animations[i];
-            const barOneStyle = arrayBars[barOneId].style;
-            barOneStyle.height = `${newHeight}px`;
-            if (i === animations.length - 1) {
-              this.loading = false;
-            }
+            style.height = `${valB}px`;
           }, i * (this.lowestSortSpeed - this.sortingSpeed));
         }
       }
+      setTimeout(() => {
+        this.loading = false;
+      }, animations.length * (this.lowestSortSpeed - this.sortingSpeed));
     },
-    bubbleSort() {
-      alert("Implementing Next!");
-    },
-    quickSort() {
-      alert("Implementing Next!");
+
+    // Handles sorting algorithm to use
+    getAnimations(algo) {
+      const arr = JSON.parse(JSON.stringify(this.array));
+      switch (algo) {
+        case MERGESORT:
+          return mergeSortAnimations(arr);
+        case QUICKSORT:
+          return quickSortAnimations(arr);
+        case HEAPSORT:
+          return heapSortAnimations(arr);
+        case BUBBLESORT:
+          return bubbleSortAnimations(arr);
+        case SELECTIONSORT:
+          return selectionSortAnimations(arr);
+        case SHELLSORT:
+          return shellSortAnimations(arr);
+        default:
+          return mergeSortAnimations(arr);
+      }
     },
   },
 };
