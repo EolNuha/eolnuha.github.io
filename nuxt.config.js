@@ -10,6 +10,18 @@ export default {
     htmlAttrs: {
       lang: "en",
     },
+    script: [
+      { src: "https://www.googletagmanager.com/gtag/js?id=G-2NV9MCXC3E" },
+      {
+        innerHTML: `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-2NV9MCXC3E');
+      `,
+      },
+    ],
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -66,6 +78,7 @@ export default {
         href: "https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap",
       },
     ],
+    __dangerouslyDisableSanitizers: ["script"],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
