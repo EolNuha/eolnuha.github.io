@@ -6,6 +6,7 @@
       <Experiences />
       <Skills />
       <Projects />
+      <Blog />
       <Contact />
     </div>
   </div>
