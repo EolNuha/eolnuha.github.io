@@ -138,7 +138,7 @@
           <span class="pillar">SCSS</span>
           <span class="pillar">CSS</span>
         </div>
-        <h3 class="font-bold my-3">Social Links:</h3>
+        <h3 class="font-bold my-3">Project Links:</h3>
         <div class="flex gap-[5px] items-center flex-wrap">
           <a
             href="https://github.com/EolNuha/eolnuha.github.io/blob/master/pages/projects/sorting-visualizer.vue"

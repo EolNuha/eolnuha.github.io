@@ -36,7 +36,7 @@
           <span class="pillar">HTML</span>
           <span class="pillar">CSS</span>
         </div>
-        <h3 class="font-bold my-3">Social Links:</h3>
+        <h3 class="font-bold my-3">Project Links:</h3>
         <div class="flex gap-[5px] items-center flex-wrap">
           <a href="https://github.com/EolNuha/cybercity">
             <svg

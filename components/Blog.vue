@@ -23,9 +23,9 @@
       </div>
       <div class="flex justify-center relative">
         <img
-          src="../assets/images/logo-top.png"
+          src="../assets/images/logo-left-black.png"
           alt="innohive logo"
-          height="200px"
+          class="w-full md:w-[80%]"
         />
       </div>
     </div>

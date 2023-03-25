@@ -5,99 +5,87 @@
       <p>These are some of the best projects that I've done recently.</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-[30px]">
-      <div>
-        <nuxt-link to="/projects/pos-desktop-app">
-          <div class="box-image">
-            <img
-              src="../assets/images/pos.webp"
-              width="100%"
-              loading="lazy"
-              alt="Point of sale Image"
-            />
-            <div class="box-name">
-              <p>Point of Sale Desktop App</p>
-            </div>
+      <nuxt-link to="/projects/pos-desktop-app" class="box-image">
+        <div>
+          <img
+            src="../assets/images/pos.webp"
+            width="100%"
+            loading="lazy"
+            alt="Point of sale Image"
+          />
+          <div class="box-name">
+            <p>Point of Sale Desktop App</p>
           </div>
-        </nuxt-link>
-      </div>
-      <div>
-        <nuxt-link to="projects/sorting-visualizer">
-          <div class="box-image">
-            <img
-              src="../assets/images/sorting-visualizer1.webp"
-              width="100%"
-              loading="lazy"
-              alt="Sorting Visualizer Image"
-            />
-            <div class="box-name">
-              <p>Sorting Visualizer</p>
-            </div>
+        </div>
+      </nuxt-link>
+      <nuxt-link to="projects/sorting-visualizer" class="box-image">
+        <div>
+          <img
+            src="../assets/images/sorting-visualizer1.webp"
+            width="100%"
+            loading="lazy"
+            alt="Sorting Visualizer Image"
+          />
+          <div class="box-name">
+            <p>Sorting Visualizer</p>
           </div>
-        </nuxt-link>
-      </div>
-      <div>
-        <nuxt-link to="projects/movie-freaks">
-          <div class="box-image">
-            <img
-              src="../assets/images/movie-freaks.webp"
-              width="100%"
-              loading="lazy"
-              alt="Movie Freaks Image"
-            />
-            <div class="box-name">
-              <p>Movie Freaks</p>
-            </div>
+        </div>
+      </nuxt-link>
+      <nuxt-link to="projects/movie-freaks" class="box-image">
+        <div>
+          <img
+            src="../assets/images/movie-freaks.webp"
+            width="100%"
+            loading="lazy"
+            alt="Movie Freaks Image"
+          />
+          <div class="box-name">
+            <p>Movie Freaks</p>
           </div>
-        </nuxt-link>
-      </div>
-      <div>
-        <nuxt-link to="projects/cyber-city">
-          <div class="box-image">
-            <img
-              src="../assets/images/cyber-city.webp"
-              width="100%"
-              loading="lazy"
-              alt="Cyber City Image"
-            />
-            <div class="box-name">
-              <p>Cyber City</p>
-            </div>
+        </div>
+      </nuxt-link>
+      <nuxt-link to="projects/cyber-city" class="box-image">
+        <div>
+          <img
+            src="../assets/images/cyber-city.webp"
+            width="100%"
+            loading="lazy"
+            alt="Cyber City Image"
+          />
+          <div class="box-name">
+            <p>Cyber City</p>
           </div>
-        </nuxt-link>
-      </div>
-      <div>
-        <nuxt-link to="projects/tower-war">
-          <div class="box-image">
-            <img
-              src="../assets/images/tower-war-game.webp"
-              width="100%"
-              loading="lazy"
-              alt="Tower War Game Image"
-            />
-            <div class="box-name">
-              <p>Tower War Game</p>
-            </div>
+        </div>
+      </nuxt-link>
+      <nuxt-link to="projects/tower-war" class="box-image">
+        <div>
+          <img
+            src="../assets/images/tower-war-game.webp"
+            width="100%"
+            loading="lazy"
+            alt="Tower War Game Image"
+          />
+          <div class="box-name">
+            <p>Tower War Game</p>
           </div>
-        </nuxt-link>
-      </div>
-      <div>
-        <nuxt-link to="projects/dino-game">
-          <div class="box-image">
-            <img
-              src="../assets/images/dino-game.webp"
-              width="100%"
-              loading="lazy"
-              alt="Dino Game Image"
-            />
-            <div class="box-name">
-              <p>Dinosaur Game</p>
-            </div>
+        </div>
+      </nuxt-link>
+      <nuxt-link to="projects/dino-game" class="box-image">
+        <div>
+          <img
+            src="../assets/images/dino-game.webp"
+            width="100%"
+            loading="lazy"
+            alt="Dino Game Image"
+          />
+          <div class="box-name">
+            <p>Dinosaur Game</p>
           </div>
-        </nuxt-link>
-      </div>
+        </div>
+      </nuxt-link>
       <!-- <div>
         <nuxt-link to="projects/e-commerce">
-          <div class="box-image">
+          <div>
             <img
               src="../assets/images/e-commerce.webp"
               width="100%"
@@ -119,7 +107,7 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-div.box-image {
+a.box-image {
   background-color: #fff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 25px;
@@ -129,7 +117,7 @@ div.box-image {
   color: #000;
 }
 
-div.box-image:hover {
+a.box-image:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 153, 255, 0.2),
     0 6px 20px 0 rgba(0, 153, 255, 0.19);
   transition-duration: 0.3s;
@@ -150,7 +138,9 @@ div.box-image:hover {
 }
 
 div.box-name {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 10px 20px;
 }
 </style>

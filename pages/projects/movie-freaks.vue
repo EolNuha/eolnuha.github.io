@@ -45,7 +45,7 @@
           <span class="pillar">Bootstrap</span>
           <span class="pillar">PostgreSQL</span>
         </div>
-        <h3 class="font-bold my-3">Social Links:</h3>
+        <h3 class="font-bold my-3">Project Links:</h3>
         <div class="flex gap-[5px] items-center flex-wrap">
           <a href="https://www.piecex.com/source-code/Movie-Website-2031">
             <svg
