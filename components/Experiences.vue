@@ -17,9 +17,9 @@
         <h3 class="italic">GjirafaTech (August 2022 - Present)</h3>
         <ul class="list-disc list-inside">
           <li>
-            Lead frontend developer for a full-end-to-end video platform
-            ecosystem, utilizing Vue.js, Vuex, HTML, CSS, SCSS, Apollo, and
-            Axios to design and develop user-facing interfaces.
+            Frontend developer for a full-end-to-end video platform ecosystem,
+            utilizing Vue.js, Vuex, HTML, CSS, SCSS, Apollo, and Axios to design
+            and develop user-facing interfaces.
           </li>
           <li>
             Collaborated with design and product teams to understand
