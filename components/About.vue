@@ -11,13 +11,12 @@
           As a highly skilled Frontend Developer at Gjirafa, I specialize in
           utilizing my problem-solving abilities and technical expertise to
           create innovative and efficient solutions. With a strong background in
-          various programming languages, including Python, JavaScript, HTML,
-          CSS, jQuery, Vue.JS, Java, and Groovy, I am well-equipped to tackle
-          any challenge that arises. My passion for technology, combined with my
-          independent, introverted nature, allows me to excel in a fast-paced
-          and dynamic work environment. I am always seeking to expand my skill
-          set and connect with other professionals in the software engineering
-          field.
+          various programming languages, including Python, JavaScript, Java,
+          C/C++, and CSS, I am well-equipped to tackle any challenge that
+          arises. My passion for technology, combined with my independent,
+          introverted nature, allows me to excel in a fast-paced and dynamic
+          work environment. I am always seeking to expand my skill set and
+          connect with other professionals in the software engineering field.
         </p>
         <!-- <button class="bg-blue-500 py-3 px-6 rounded text-white">
           Download Resume
@@ -25,7 +24,7 @@
       </div>
       <div class="flex justify-center relative">
         <div class="absolute top-[50%]" style="transform: translateY(-50%)">
-          <a href="/cv.pdf" download="resume">
+          <a href="/resume.pdf" download="resume">
             <button
               class="bg-transparent border border-gray-200 py-3 px-6 rounded text-white"
               style="backdrop-filter: blur(40px)"
