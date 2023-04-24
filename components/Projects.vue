@@ -115,6 +115,7 @@ a.box-image {
   border-radius: 8px;
   font-size: 1.5rem;
   color: #000;
+  overflow: hidden;
 }
 
 a.box-image:hover {
