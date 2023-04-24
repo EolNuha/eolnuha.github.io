@@ -44,7 +44,7 @@ export default {
       },
       {
         property: "og:image",
-        content: "/preview-eolnuha.png",
+        content: "https://eolnuha.github.io/preview-eolnuha.png",
       },
       {
         property: "og:description",
@@ -58,7 +58,7 @@ export default {
       },
       {
         name: "twitter:image",
-        content: "/preview-eolnuha.png",
+        content: "https://eolnuha.github.io/preview-eolnuha.png",
       },
       {
         name: "twitter:description",
