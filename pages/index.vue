@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header smallText="Hi, I am" largeText="Eol Nuha" />
-    <div class="container">
+    <div class="container" id="container">
       <About />
       <Experiences />
       <Skills />
@@ -13,8 +13,41 @@
 </template>
 
 <script>
-export default {};
+export default {
+  mounted() {
+    const container = document.getElementById("container");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const card = entry.target;
+          if (entry.isIntersecting) {
+            card.setAttribute("focused", "");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    container.children.forEach((card) => {
+      observer.observe(card);
+    });
+  },
+};
 </script>
+
+<style lang="scss" scoped>
+.container > div {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s ease;
+}
+
+.container > div[focused] {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
 
 <style lang="scss">
 .section-title {

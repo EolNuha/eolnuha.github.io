@@ -24,7 +24,7 @@
       </div>
       <div class="flex justify-center relative">
         <div class="absolute top-[50%]" style="transform: translateY(-50%)">
-          <a href="/resume.pdf" download="resume">
+          <a href="/eol_nuha_resume.pdf" download="eol_nuha_resume">
             <button
               class="bg-transparent border border-gray-200 py-3 px-6 rounded text-white"
               style="backdrop-filter: blur(40px)"

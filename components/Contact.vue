@@ -17,7 +17,7 @@
       </div>
       <div class="flex flex-col items-center gap-[10px] py-8 px-3">
         <span class="icon icon-location"></span>
-        <h4>Prishtina, Kosovo</h4>
+        <h4>Worldwide</h4>
       </div>
     </div>
     <div>
