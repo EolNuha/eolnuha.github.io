@@ -29,7 +29,7 @@ export default {
       { threshold: 0.2 }
     );
 
-    container.children?.forEach((card) => {
+    Array.from(container.children).forEach((card) => {
       observer.observe(card);
     });
   },
