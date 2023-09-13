@@ -1,7 +1,7 @@
 <template>
   <div class="header mb-5">
     <div
-      class="inner-header flex flex-col items-center justify-center gap-[5px] relative"
+      class="inner-header flex flex-col justify-center gap-[5px] relative"
     >
       <nav
         class="absolute top-[10px] bg-transparent border-gray-200 px-2 sm:px-4 py-2.5 rounded w-full"
@@ -66,9 +66,15 @@
         </div>
       </nav>
 
-      <p class="text-2xl">{{ smallText }}</p>
-      <hr class="devider header-devider max-w-[130px] md:max-w-[180px]" />
-      <h1 class="text-5xl md:text-7xl text-wrap">{{ largeText }}</h1>
+      <div class="flex justify-around">
+        <div>
+          <p class="text-2xl cursive-text">{{ smallText }}</p>
+          <hr class="devider header-devider max-w-[130px] md:max-w-[180px]" />
+          <h1 class="text-5xl md:text-7xl text-wrap font-bold my-4">{{ largeText }}</h1>
+          <p>A <span ref="typeElement"></span></p>
+        </div>
+        <div><img src="../assets/images/eoli.webp" height="150px"></img></div>
+      </div>
     </div>
 
     <div>
@@ -113,6 +119,7 @@
 </template>
 
 <script>
+import Typed from 'typed.js';
 export default {
   props: {
     smallText: {
@@ -128,6 +135,16 @@ export default {
     return {
       navbar: false,
     };
+  },
+  mounted() {
+    const options = {
+      strings: ["front-end developer", "back-end developer", "full-stack developer"],
+      typeSpeed: 50, // Typing speed in milliseconds
+      backSpeed: 30, // Backspacing speed in milliseconds
+      loop: true, // Set to true for continuous looping
+    };
+
+    const typed = new Typed(this.$refs.typeElement, options);
   },
 };
 </script>

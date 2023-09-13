@@ -1,7 +1,7 @@
 <template>
   <div id="experiences">
     <div class="section-title mt-10">
-      <h1>Experiences</h1>
+      <h1 class="cursive-text">Experiences</h1>
       <p>Below are my job experiences as a software developer.</p>
     </div>
     <div class="flex items-center flex-wrap gap-[20px]">

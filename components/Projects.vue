@@ -1,7 +1,7 @@
 <template>
   <div id="projects">
     <div class="section-title mt-10">
-      <h1>Projects</h1>
+      <h1 class="cursive-text">Projects</h1>
       <p>These are some of the best projects that I've done recently.</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-[30px]">

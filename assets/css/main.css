@@ -14,6 +14,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.cursive-text {
+  font-family: Brush Script MT, Brush Script Std, cursive;
+}
+
 .container {
 	margin: 0 auto !important;
 }

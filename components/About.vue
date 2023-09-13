@@ -1,7 +1,7 @@
 <template>
   <div id="about">
     <div class="section-title">
-      <h1>About Me</h1>
+      <h1 class="cursive-text">About Me</h1>
       <p>I am Eol Nuha, and I am a full-stack software developer.</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 justify-center items-center">

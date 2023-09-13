@@ -1,7 +1,7 @@
 <template>
   <div id="skills">
     <div class="section-title mt-10">
-      <h1>Skills</h1>
+      <h1 class="cursive-text">Skills</h1>
       <p>These are my main skills as a full-stack software developer.</p>
     </div>
     <div

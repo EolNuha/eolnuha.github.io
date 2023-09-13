@@ -1,7 +1,7 @@
 <template>
   <div id="about">
     <div class="section-title">
-      <h1>The InnoHive</h1>
+      <h1 class="cursive-text">The InnoHive</h1>
       <p>Website for programming tutorials</p>
     </div>
     <div
