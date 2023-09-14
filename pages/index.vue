@@ -23,6 +23,8 @@ export default {
           const card = entry.target;
           if (entry.isIntersecting) {
             card.setAttribute("focused", "");
+          } else {
+            card.removeAttribute("focused");
           }
         });
       },

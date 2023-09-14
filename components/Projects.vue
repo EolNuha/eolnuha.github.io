@@ -10,7 +10,6 @@
           <img
             src="../assets/images/pos.webp"
             width="100%"
-            loading="lazy"
             alt="Point of sale Image"
           />
           <div class="box-name">
@@ -23,7 +22,6 @@
           <img
             src="../assets/images/sorting-visualizer1.webp"
             width="100%"
-            loading="lazy"
             alt="Sorting Visualizer Image"
           />
           <div class="box-name">
