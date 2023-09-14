@@ -143,7 +143,7 @@ export default {
   },
   mounted() {
     const options = {
-      strings: ["Full-stack Developer", "Desktop Developer", "Computer-Science Major", "Hardworking"],
+      strings: ["Full-stack Developer", "Computer-Science Major", "Hardworking", "Desktop Developer"],
       typeSpeed: 50, // Typing speed in milliseconds
       backSpeed: 30, // Backspacing speed in milliseconds
       loop: true, // Set to true for continuous looping
