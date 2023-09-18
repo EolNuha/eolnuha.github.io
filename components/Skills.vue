@@ -101,7 +101,7 @@ export default {
   data() {
     return {
       loading: false,
-      category: "frontent",
+      category: "frontend",
       skills: [],
       skillsList: [
         { language: "html", category: "frontend", percent: "100" },
@@ -194,6 +194,9 @@ export default {
   border-radius: 10px;
   transform: scaleX(0);
   transform-origin: left;
+}
+
+#skills[focused] .my-skills-bar .bar .progress-line {
   animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
 }
 

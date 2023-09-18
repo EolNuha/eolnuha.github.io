@@ -143,7 +143,7 @@ export default {
   },
   mounted() {
     const options = {
-      strings: ["Full-stack Developer", "Computer-Science Major", "Hardworking", "Desktop Developer"],
+      strings: ["Front-End Developer at Gjirafa, Inc.", "Computer-Science Major", "Dedicated and Hardworking"],
       typeSpeed: 50, // Typing speed in milliseconds
       backSpeed: 30, // Backspacing speed in milliseconds
       loop: true, // Set to true for continuous looping
@@ -155,6 +155,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+
 h1 {
   font-weight: 300;
   letter-spacing: 2px;

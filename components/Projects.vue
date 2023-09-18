@@ -34,7 +34,6 @@
           <img
             src="../assets/images/movie-freaks.webp"
             width="100%"
-            loading="lazy"
             alt="Movie Freaks Image"
           />
           <div class="box-name">
@@ -47,7 +46,6 @@
           <img
             src="../assets/images/cyber-city.webp"
             width="100%"
-            loading="lazy"
             alt="Cyber City Image"
           />
           <div class="box-name">
@@ -60,7 +58,6 @@
           <img
             src="../assets/images/tower-war-game.webp"
             width="100%"
-            loading="lazy"
             alt="Tower War Game Image"
           />
           <div class="box-name">
@@ -73,7 +70,6 @@
           <img
             src="../assets/images/dino-game.webp"
             width="100%"
-            loading="lazy"
             alt="Dino Game Image"
           />
           <div class="box-name">

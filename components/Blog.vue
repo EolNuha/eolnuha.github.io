@@ -2,7 +2,7 @@
   <div id="about">
     <div class="section-title">
       <h1 class="cursive-text">The InnoHive</h1>
-      <p>Website for programming tutorials</p>
+      <p>Blog for programming tutorials</p>
     </div>
     <div
       class="grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-[20px]"
