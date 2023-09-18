@@ -155,8 +155,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
-
 h1 {
   font-weight: 300;
   letter-spacing: 2px;

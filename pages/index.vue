@@ -37,7 +37,6 @@ export default {
   },
 };
 </script>
-
 <style lang="scss" scoped>
 .container > div {
   opacity: 0;
