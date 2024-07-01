@@ -1,10 +1,10 @@
 <template>
   <div class="header mb-5">
     <div
-      class="inner-header flex flex-col justify-center gap-[5px] relative"
+      class="inner-header flex flex-col gap-[5px] relative"
     >
       <nav
-        class="py-2.5 mb-10 -mt-10 rounded w-full"
+        class="py-2.5 mb-10 mt-5 rounded w-full"
       >
         <div
           class="container !p-[6px] flex flex-wrap items-center justify-between mx-auto bg-neutral-700 rounded-[40px]"
@@ -257,6 +257,9 @@ p {
   }
   .content {
     height: 30vh;
+  }
+  .inner-header {
+    height: 50vh;
   }
 }
 
