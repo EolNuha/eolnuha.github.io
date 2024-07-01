@@ -4,13 +4,12 @@
       class="inner-header flex flex-col justify-center gap-[5px] relative"
     >
       <nav
-        class="absolute top-[10px] bg-transparent border-gray-200 px-2 sm:px-4 py-2.5 rounded w-full"
-        v-show="$nuxt.$route.path !== '/'"
+        class="py-2.5 mb-10 -mt-10 rounded w-full"
       >
         <div
-          class="container flex flex-wrap items-center justify-between mx-auto"
+          class="container !p-[6px] flex flex-wrap items-center justify-between mx-auto bg-neutral-700 rounded-[40px]"
         >
-          <nuxt-link class="border-b-2 px-2" to="/">Home</nuxt-link>
+          <nuxt-link class="flex items-center justify-center px-4 h-[42px] rounded-[40px] hover:bg-blue-500" to="/">Home</nuxt-link>
           <button
             type="button"
             class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-neutral-700 focus:outline-none focus:ring-2 focus:ring-neutral-500"
@@ -39,25 +38,25 @@
             id="navbar"
           >
             <ul
-              class="bg-transparent flex flex-col p-4 mt-4 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium"
+              class="bg-transparent flex flex-col p-0 mt-4 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium"
             >
               <li>
-                <nuxt-link class="border-b-2 px-2" to="/#about"
+                <nuxt-link class="flex items-center justify-center px-4 h-[42px] rounded-[40px] hover:bg-blue-500" to="/#about"
                   >About</nuxt-link
                 >
               </li>
               <li>
-                <nuxt-link class="border-b-2 px-2" to="/#experiences"
+                <nuxt-link class="flex items-center justify-center px-4 h-[42px] rounded-[40px] hover:bg-blue-500" to="/#experiences"
                   >Experiences</nuxt-link
                 >
               </li>
               <li>
-                <nuxt-link class="border-b-2 px-2" to="/#projects"
+                <nuxt-link class="flex items-center justify-center px-4 h-[42px] rounded-[40px] hover:bg-blue-500" to="/#projects"
                   >Projects</nuxt-link
                 >
               </li>
               <li>
-                <nuxt-link class="border-b-2 px-2" to="/#contact"
+                <nuxt-link class="flex items-center justify-center px-4 h-[42px] rounded-[40px] hover:bg-blue-500" to="/#contact"
                   >Contact</nuxt-link
                 >
               </li>
@@ -70,8 +69,8 @@
         <div>
           <p class="text-2xl cursive-text">{{ smallText }}</p>
           <hr class="devider header-devider max-w-[130px] md:max-w-[180px]" />
-          <h1 class="text-5xl md:text-7xl text-wrap font-bold my-4">{{ largeText }}</h1>
-          <p v-show="$nuxt.$route.path === '/'"><span ref="typeElement"></span></p>
+          <h1 class="text-5xl text-wrap font-bold my-4">{{ largeText }}</h1>
+          <p v-show="$nuxt.$route.path === '/'" class="min-w-[300px]"><span ref="typeElement"></span></p>
         </div>
         <div class="relative hidden md:block">
           <div class="absolute top-[25px] left-[25px] w-[300px] h-[300px] border-solid border-2 border-gray-300"></div>  
@@ -144,9 +143,9 @@ export default {
   mounted() {
     const options = {
       strings: ["Front-End Developer at Gjirafa, Inc.", "Computer-Science Major", "Dedicated and Hardworking"],
-      typeSpeed: 50, // Typing speed in milliseconds
-      backSpeed: 30, // Backspacing speed in milliseconds
-      loop: true, // Set to true for continuous looping
+      typeSpeed: 50,
+      backSpeed: 30,
+      loop: true,
     };
 
     const typed = new Typed(this.$refs.typeElement, options);
@@ -183,6 +182,9 @@ p {
     rgb(43, 43, 44) 100%
   );
   color: white;
+  .nuxt-link-exact-active {
+    @apply bg-blue-500;
+  }
 }
 .logo {
   width: 50px;
@@ -193,7 +195,7 @@ p {
 }
 
 .inner-header {
-  height: 65vh;
+  height: 70vh;
   width: 100%;
   margin: 0;
   padding: 0;
