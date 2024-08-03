@@ -1,17 +1,16 @@
 export const personalData = {
-  name: "ABU SAID",
-  profile: '/profile.png',
+  name: "EOL NUHA",
+  profile: '/profile.jpg',
   designation: "Software Developer",
-  description: "My name is ABU SAID. I am a professional and enthusiastic programmer in my daily life. I am a quick learner with a self-learning attitude. I love to learn and explore new technologies and am passionate about problem-solving. I love almost all the stacks of web application development and love to make the web more open to the world. My core skill is based on JavaScript and I love to do most of the things using JavaScript. I am available for any kind of job opportunity that suits my skills and interests.",
-  email: 'abusaid7388@gmail.com',
-  phone: '+8801608797655',
-  address: 'Middle Badda, Dhaka, Bangladesh - 1212 ',
-  github: 'https://github.com/said7388',
+  description: "As a highly skilled Frontend Developer at Gjirafa, I specialize in utilizing my problem-solving abilities and technical expertise to create innovative and efficient solutions. With a strong background in various programming languages, including Python, JavaScript, Java, C/C++, and CSS, I am well-equipped to tackle any challenge that arises. My passion for technology, combined with my independent, introverted nature, allows me to excel in a fast-paced and dynamic work environment. I am always seeking to expand my skill set and connect with other professionals in the software engineering field.",
+  email: 'eol.nuha22@gmail.com',
+  phone: '+38348518584',
+  address: 'Prishtina, Kosovo',
+  github: 'https://github.com/EolNuha',
   facebook: 'https://www.facebook.com/abusaid.riyaz/',
-  linkedIn: 'https://www.linkedin.com/in/abu-said-bd/',
-  twitter: 'https://twitter.com/said7388',
-  stackOverflow: 'https://stackoverflow.com/users/16840768/abu-said',
-  leetcode: "https://leetcode.com/said3812/",
+  linkedIn: 'https://www.linkedin.com/in/eolnuha/',
+  stackOverflow: 'https://stackoverflow.com/users/14683130/eol-nuha',
+  leetcode: "https://leetcode.com/u/eolnuha/",
   devUsername: "said7388",
-  resume: "https://drive.google.com/file/d/1eyutpKFFhJ9X-qpQGKhUNnVRkB5Wer00/view?usp=sharing"
+  resume: "https://drive.google.com/file/d/1yDvj8R3djm0s5ecpR9fA584sdk79DLqC/view?usp=sharing"
 }

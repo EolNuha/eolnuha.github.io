@@ -1,13 +1,14 @@
 {
   "name": "developer-portfolio",
-  "description": "Portfolio of Abu Said",
+  "description": "Portfolio of Eol Nuha",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "push-dir --dir=out --branch=docs --cleanup"
   },
   "dependencies": {
     "@emailjs/browser": "^4.3.1",
@@ -15,12 +16,14 @@
     "axios": "^1.6.8",
     "lottie-react": "^2.4.0",
     "next": "^14.1.3",
+    "push-dir": "^0.4.1",
     "react": "latest",
     "react-dom": "latest",
     "react-fast-marquee": "^1.6.2",
     "react-google-recaptcha": "^3.1.0",
     "react-icons": "^4.11.0",
-    "react-toastify": "^10.0.4"
+    "react-toastify": "^10.0.4",
+    "sharp": "^0.33.4"
   },
   "devDependencies": {
     "autoprefixer": "latest",
