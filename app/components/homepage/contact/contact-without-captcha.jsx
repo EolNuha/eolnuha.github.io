@@ -1,14 +1,14 @@
 "use client";
 // @flow strict
 import { isValidEmail } from '@/utils/check-email';
-import axios from 'axios';
 import { useState } from 'react';
-import { TbMailForward } from "react-icons/tb";
+import { TbMailForward, TbLoader2 } from "react-icons/tb";
 import { toast } from 'react-toastify';
 import emailjs from "@emailjs/browser";
 
 function ContactWithoutCaptcha() {
   const [error, setError] = useState({ email: false, required: false });
+  const [loading, setLoading] = useState(false);
   const [userInput, setUserInput] = useState({
     fullName: '',
     email: '',
@@ -22,19 +22,19 @@ function ContactWithoutCaptcha() {
   };
 
   const handleSendMail = async (e) => {
-    // e.preventDefault();
-    // if (!userInput.email || !userInput.message || !userInput.fullName) {
-      //   setError({ ...error, required: true });
-      //   return;
-      // } else if (error.email) {
-        //   return;
-        // } else {
-          //   setError({ ...error, required: false });
-          // };
+    e.preventDefault();
+    if (!userInput.email || !userInput.message || !userInput.fullName) {
+        setError({ ...error, required: true });
+        return;
+    } else if (error.email) {
+        return;
+    } else {
+      setError({ ...error, required: false });
+    };
+    setLoading(true)
           
-          const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-          const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
-          console.log('hello', serviceID, templateID)
+    const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
 
     try {
       const res = await emailjs.send(serviceID, templateID, userInput, "user_1wflK7WkbyVGouoePZaLU");
@@ -43,13 +43,15 @@ function ContactWithoutCaptcha() {
       if (res.status === 200) {
         toast.success('Message sent successfully!');
         setUserInput({
-          name: '',
+          fullName: '',
           email: '',
           message: '',
         });
       };
     } catch (error) {
       toast.error(error?.text || error);
+    } finally {
+      setLoading(false);
     };
   };
 
@@ -96,7 +98,7 @@ function ContactWithoutCaptcha() {
           </div>
 
           <div className="flex flex-col gap-2">
-            <label className="text-base">Your Message sadsa: </label>
+            <label className="text-base">Your Message: </label>
             <textarea
               className="bg-[#10172d] w-full border rounded-md border-[#353a52] focus:border-[#16f2b3] ring-0 outline-0 transition-all duration-300 px-3 py-2"
               maxLength="500"
@@ -119,8 +121,17 @@ function ContactWithoutCaptcha() {
               role="button"
               onClick={handleSendMail}
             >
-              <span>Send Message</span>
-              <TbMailForward className="mt-1" size={18} />
+              
+              {
+                loading ? 
+                <TbLoader2 size={18} className='animate-spin'  /> :
+                (
+                  <>
+                    <span>Send Message</span>
+                    <TbMailForward className="mt-1" size={18} />
+                  </>
+                )
+              }
             </button>
           </div>
         </div>

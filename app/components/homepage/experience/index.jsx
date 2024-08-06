@@ -2,10 +2,10 @@
 
 import { experiences } from "@/utils/data/experience";
 import Image from "next/image";
-import { BsPersonWorkspace } from "react-icons/bs";
 import AnimationLottie from "../../helper/animation-lottie";
 import GlowCard from "../../helper/glow-card";
 import experience from '/public/lottie/code.json';
+import Link from "next/link";
 
 function Experience() {
   return (
@@ -41,14 +41,8 @@ function Experience() {
               {
                 experiences.map(experience => (
                   <GlowCard key={experience.id} identifier={`experience-${experience.id}`}>
+                    <Link href={experience.url ? `/experience/${experience.url}` : '#'}>
                     <div className="p-3 relative">
-                      <Image
-                        src="/blur-23.svg"
-                        alt="Hero"
-                        width={1080}
-                        height={200}
-                        className="absolute bottom-0 opacity-80"
-                      />
                       <div className="flex justify-center">
                         <p className="text-xs sm:text-sm text-[#16f2b3]">
                           {experience.duration}
@@ -56,18 +50,27 @@ function Experience() {
                       </div>
                       <div className="flex items-center gap-x-8 px-3 py-5">
                         <div className="text-violet-500  transition-all duration-300 hover:scale-125">
-                          <BsPersonWorkspace size={36} />
+                        <Image
+                          src={experience.imgSrc}
+                          alt="Hero"
+                          width={50}
+                          height={50}
+                        />
                         </div>
                         <div>
                           <p className="text-base sm:text-xl mb-2 font-medium uppercase">
                             {experience.title}
                           </p>
-                          <p className="text-sm sm:text-base">
-                            {experience.company}
+                          <p className="text-sm sm:text-base mb-2">
+                            {experience.company} <span className="text-xs">- {experience.location}</span>
+                          </p>
+                          <p className="text-xs">
+                            Tech Stack: {experience.techStack}... {experience.url &&<Link href={`/experience/${experience.url}`} className="text-pink-500">Read more</Link>}
                           </p>
                         </div>
                       </div>
                     </div>
+                    </Link>
                   </GlowCard>
                 ))
               }
