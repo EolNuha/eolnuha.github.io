@@ -32,12 +32,9 @@ function ContactWithoutCaptcha() {
       setError({ ...error, required: false });
     };
     setLoading(true)
-          
-    const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-    const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
 
     try {
-      const res = await emailjs.send(serviceID, templateID, userInput, "user_1wflK7WkbyVGouoePZaLU");
+      const res = await emailjs.send("service_0ypuexl", "template_uvinz95", userInput, "user_1wflK7WkbyVGouoePZaLU");
       // const teleRes = await axios.post(`${process.env.NEXT_PUBLIC_APP_URL}/api/contact`, userInput);
 
       if (res.status === 200) {
