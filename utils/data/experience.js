@@ -14,7 +14,7 @@ export const experiences = [
     title: "Frontend Developer",
     company: "WebOrigo",
     location: "Budapest, Hungary",
-    duration: "(May 2022 - Jul 2022)",
+    duration: "(Apr 2022 - Jun 2022)",
     imgSrc: "/weborigo.webp",
     techStack: "Javascript, Typescript, Vue.js, Nuxt.js, Axios"
   },
